@@ -20,7 +20,7 @@ trait myConfig {
 
 
   //Hadoop File creation
-
+System.setProperty("hadoop.home.dir", "/")
   val conf = new Configuration()
   conf.set("fs.defaultFS", "hdfs://172.17.0.2:8020")
   val hadoop:FileSystem = FileSystem.get(conf)
